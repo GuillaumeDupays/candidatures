@@ -1,0 +1,28 @@
+<section id="candidatures" class="container">
+  <h1>Candidatures</h1>
+
+  {{#each candidatures}}
+
+  <div class="candidature">
+    <div class="titre">
+      <h3>{{ poste }}</h3>
+      <em> chez {{ nom_entreprise }}</em>
+    </div>
+    <div class="tech">
+      <p>
+        <small>Compétences demandées : <span>{{competences}}</span></small>
+      </p>
+      <p>
+        <small>
+          <a href="{{url_annonce}}">Détail de l'offre d'emploi</a>
+        </small>
+      </p>
+      <div class="reponse-recruteur">
+        <a href="/candidatures/{{id}}">Suivi de candidature</a>
+      </div>
+    </div>
+  </div>
+  {{else}}
+    <p>No candidatures available</p>
+  {{/each}}
+</section>

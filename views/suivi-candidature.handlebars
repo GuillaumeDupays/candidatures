@@ -1,0 +1,23 @@
+<section id="suivi-candidature">
+    {{#if candidature}}
+    
+    <div>
+        <h3>Suivi de candidature</h3>
+        <p>
+            <large>{{ candidature.poste }}</large>
+        </p>
+        <p>
+            <small>Candidature envoyée le : {{ candidature.createdAt}}</small>
+        </p>
+        <p>
+            <a href="/recruteur">Contacter le recruteur</a>
+        </p>
+        <p>
+            <small>Réponse du recruteur : trop junior...</small>
+        </p>
+        <medium><a href="/candidatures">Retour à la liste des candidatures</a></medium>
+    </div>
+      {{else}}
+    <p>No candidatures available</p>
+      {{/if}}
+</section>

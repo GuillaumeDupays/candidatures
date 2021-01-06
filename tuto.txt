@@ -1,0 +1,4 @@
+Installation des dépendences 
+
+npm i express body-parser sequelize pg pg-hstore
+npm i -D nodemon

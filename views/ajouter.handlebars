@@ -1,0 +1,36 @@
+<section id="ajouter" class="container">
+    <div class="form-wrap">
+      <h1>Ajouter une candidature</h1>
+      <p>Your contact email will be shared with registered users to apply to your candidature</p>
+      {{#each errors}}
+        <div class="error">
+          <p>{{text}}</p>
+        </div>
+      {{/each}}
+      <form action="/candidatures/ajouter" method="POST">
+        <div class="input-group">
+          <label for="poste">Poste</label>
+          <input type="text" name="poste" id="poste" class="input-box" placeholder="Intitulé du poste"
+            maxlength="100" value={{poste}}>
+        </div>
+        <div class="input-group">
+          <label for="competences">Compétences demandées</label>
+          <input type="text" name="competences" id="competences" class="input-box" placeholder="ex. javascript, react, PHP"
+          maxlength="100" value={{competences}}>
+        </div>
+        <div class="input-group">
+          <label for="nom_entreprise">Nom de l'entreprise</label>
+          <input type="text" name="nom_entreprise" id="nom_entreprise" class="input-box" placeholder="nom de l'entreprise" value={{nom_entreprise}}>
+        </div>
+        <div class="input-group">
+          <label for="url_annonce">Lien vers l'offre d'emploi</label>
+          <input type="text" name="url_annonce" id="url_annonce" class="input-box" placeholder="Coller le lien ici" value="{{url_annonce}}">
+        </div>
+        <div class="input-group">
+          <label for="recruteur_email">Adresse email du recruteur</label>
+          <input type="email" name="recruteur_email" id="recruteur_email" class="input-box" placeholder="Entrez l'adresse email" value={{recruteur_email}}>
+        </div>
+        <input type="submit" value="Ajouter une candidature" class="btn btn-reverse">
+      </form>
+    </div>
+  </section>
